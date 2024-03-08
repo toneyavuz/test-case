@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  font-family: var(--font-mono);
+}

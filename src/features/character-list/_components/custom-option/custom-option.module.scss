@@ -1,0 +1,25 @@
+.custom-option {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+
+  &__check {
+    margin-right: 12px;
+  }
+
+  &__image {
+    border-radius: 12px;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__title {
+    font-size: 18px;
+    padding-bottom: 8px;
+  }
+
+  &__episode {
+    font-size: 14px;
+  }
+}
