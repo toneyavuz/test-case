@@ -151,16 +151,16 @@ a {
         background-color: var(--bg-secondary);
         color: var(--text-primary);
   
+        &--is-selected {
+          background-color: color(var(--hover-color));
+          color: var(--text-primary);
+          // --color-intensity: var(--lighten);
+        }
+        
         &:hover,
         &--is-focused {
           background-color: var(--hover-color);
           color: var(--text-primary);
-        }
-  
-        &--is-selected {
-          background-color: color(var(--hover-color));
-          color: var(--text-primary);
-          --color-intensity: var(--lighten);
         }
       }
   
