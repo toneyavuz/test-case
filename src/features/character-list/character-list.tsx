@@ -13,7 +13,6 @@ const CharacterList = (): ReactNode => {
     []
   );
 
-  console.log(state.options);
   useEffect(() => {
     onSearch('');
   }, [onSearch]);
