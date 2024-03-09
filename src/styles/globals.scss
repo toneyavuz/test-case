@@ -120,74 +120,80 @@ a {
     color-scheme: dark;
   }
 
-  .react-select-container {
-    --hover-color: #2a2a2a;
-    .react-select__control {
-      background-color: var(--bg-secondary);
-      border: 1px solid var(--border-color);
-      color: var(--text-primary);
-      box-shadow: none; // Removes additional styling for borders/shadows
-
-      &:hover {
+  .react-select {
+    $react-select: &;
+    &-container {
+      --hover-color: #2a2a2a;
+      .react-select__control {
+        background-color: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+        box-shadow: none; // Removes additional styling for borders/shadows
+  
+        &:hover {
+          border-color: var(--border-color);
+        }
+      }
+  
+      #{$react-select}__value-container {
+        color: var(--text-primary);
+        #{$react-select}__input {
+          color: var(--text-primary) !important;
+        }
+      }
+  
+      #{$react-select}__menu {
+        background-color: var(--bg-secondary);
         border-color: var(--border-color);
       }
-    }
-
-    .react-select__value-container {
-      color: var(--text-primary);
-    }
-
-    .react-select__menu {
-      background-color: var(--bg-secondary);
-      border-color: var(--border-color);
-    }
-
-    .react-select__option {
-      background-color: var(--bg-secondary);
-      color: var(--text-primary);
-
-      &:hover,
-      &--is-focused {
-        background-color: var(--hover-color);
+  
+      #{$react-select}__option {
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+  
+        &:hover,
+        &--is-focused {
+          background-color: var(--hover-color);
+          color: var(--text-primary);
+        }
+  
+        &--is-selected {
+          background-color: color(var(--hover-color));
+          color: var(--text-primary);
+          --color-intensity: var(--lighten);
+        }
+      }
+  
+      #{$react-select}__single-value {
         color: var(--text-primary);
       }
-
-      &--is-selected {
-        background-color: color(var(--hover-color));
-        color: var(--text-primary);
-        --color-intensity: var(--lighten);
-      }
-    }
-
-    .react-select__single-value {
-      color: var(--text-primary);
-    }
-
-    .react-select__placeholder {
-      color: color(var(--text-primary));
-    }
-
-    .react-select__indicator-separator {
-      background-color: var(--border-color);
-    }
-
-    .react-select__indicator {
-      color: var(--text-primary);
-      &:hover {
+  
+      #{$react-select}__placeholder {
         color: color(var(--text-primary));
       }
-    }
-
-    .react-select__multi-value {
-      background-color: color(var(--bg-secondary));
-      .react-select__multi-value__label {
-        color: var(--text-primary);
+  
+      #{$react-select}__indicator-separator {
+        background-color: var(--border-color);
       }
-      .react-select__multi-value__remove {
+  
+      #{$react-select}__indicator {
         color: var(--text-primary);
         &:hover {
-          background-color: var(--text-primary);
-          color: var(--bg-secondary);
+          color: color(var(--text-primary));
+        }
+      }
+  
+      #{$react-select}__multi-value {
+        background-color: color(var(--bg-secondary));
+        #{$react-select}__multi-value__label {
+          color: var(--text-primary);
+        }
+        #{$react-select}__multi-value__remove {
+          color: var(--text-primary);
+          &:hover {
+            background-color: var(--text-primary);
+            color: var(--bg-secondary);
+          }
         }
       }
     }
