@@ -8,5 +8,9 @@ docker build -t rick-test-case .
 docker run  -p 2300:3000 -d rick-test-case
 ```
 
+```
+https://test-case-five.vercel.app/
+```
+
 
 ![](public/character-list.png?raw=true)
